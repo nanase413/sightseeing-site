@@ -1,13 +1,15 @@
 import * as React from 'react';
+import { useRef } from 'react'
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ToggleButton from "../../../components/toggleButton";
 import FlagImage from '../../../images/flag/MaltaFlag.png';
-import FoodImage from '../../../images/food/MaltaFood.jpg';
+import FoodImage from '../../../images/food/MaltaFood4.jpg';
 import SpotImage from '../../../images/spot/MaltaSpot.jpg';
 import { Country } from '../../top/country';
 import { useLocation } from "react-router";
 import { Link } from 'react-router-dom'
+
 
 const Header = styled.header`
   font-size: 1.5rem;
@@ -18,7 +20,7 @@ const Header = styled.header`
   position: fixed;
   right: 0;
   top: 0;
-  background: rgb(205, 185, 180);
+  background: rgb(205, 185, 150);
 `
 const Wrapper = styled.div`
   bottom: 0;
@@ -151,7 +153,7 @@ export const Malta: React.FC = () => {
           <MainBackGraund>
             <CountryArea>
                 <AboutCountryArea>
-                    <LinkFont to= "/sub">
+                    <LinkFont to= "/malta/details/aboutMalta">
                         <AreaBackGraund>
                             <AreaImageTop />
                                 <Flag />
@@ -162,7 +164,7 @@ export const Malta: React.FC = () => {
                     </LinkFont>
                 </AboutCountryArea>
                 <FoodArea>
-                    <LinkFont to= "/sub">
+                    <LinkFont to= "/malta/details/maltaFood">
                         <AreaBackGraund>
                             <AreaTitleTop>
                                 <AreaTitleTopFont>about FOOD</AreaTitleTopFont>
@@ -173,7 +175,7 @@ export const Malta: React.FC = () => {
                     </LinkFont>
                 </FoodArea>
                 <SpotArea>
-                    <LinkFont to= "/sub">
+                    <LinkFont to= "/malta/details/maltaSpot">
                         <AreaBackGraund>
                             <AreaImageTop />
                                 <Spot />

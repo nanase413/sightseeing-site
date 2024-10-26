@@ -11,6 +11,9 @@ import {
 import { Top } from './pages/top/top'
 import { Sub } from './pages/sub/sub'
 import { Malta } from './pages/sub/malta/malta'
+import { AboutMalta } from './pages/sub/malta/details/aboutMalta'
+import { MaltaFood } from './pages/sub/malta/details/maltaFood'
+import { MaltaSpot } from './pages/sub/malta/spot/maltaSpot'
 
 const GlobalStyle = createGlobalStyle`
   body * {
@@ -30,6 +33,15 @@ const Main = (
         </Route>
         <Route exact path="/malta">
           <Malta />
+        </Route>
+        <Route exact path="/malta/details/aboutMalta">
+          <AboutMalta />
+        </Route>
+        <Route exact path="/malta/details/maltaFood">
+          <MaltaFood />
+        </Route>
+        <Route exact path="/malta/food/maltaSpot">
+          <MaltaSpot />
         </Route>
         <Redirect to="/top" path="*" />
       </Router>

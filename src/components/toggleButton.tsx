@@ -45,23 +45,21 @@ const HamburgerMenu = () => {
       <button onClick={toggleMenu}>
         {isOpen ? 'CLOSE' : 'OPEN'}
       </button>
-      {isOpen && (
-        <Menu>
       
+      {isOpen && (
+        <Menu>     
           <LinkArea>
             <LinkStyle>
-                <LinkFont to="/sub" className="menu-germany" id="menuGermany">
-                      ドイツ
-                </LinkFont>
+              <LinkFont to="/sub" className="menu-germany" id="menuGermany">
+                ドイツ
+              </LinkFont>
             </LinkStyle>
             <LinkStyle>
-                <LinkFont to="/sub" className="menu-malta" >
-                  マルタ
-                </LinkFont>
+              <LinkFont to="/malta" className="menu-malta" >
+                マルタ
+              </LinkFont>
             </LinkStyle>
-
           </LinkArea>
-  
         </Menu>
       )}
     </div>
