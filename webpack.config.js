@@ -9,6 +9,16 @@ module.exports = {
             use: 'ts-loader',
             exclude: /node_modules/,
         },
+        {
+            test: /\.png?$/,  
+            type: 'asset/inline',
+            exclude: /node_modules/,
+        },
+        {
+            test: /\.jpg?$/,  
+            type: 'asset/inline',
+            exclude: /node_modules/,
+        },
       ],
     },
     resolve: {
@@ -18,5 +28,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js',
         publicPath: 'dist/',
-  }
+    },
+    devServer: {
+        publicPath: '/dist/',
+        hot: true,
+        open: true,
+    }
 }
