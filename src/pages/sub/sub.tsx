@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import ToggleButton from "../components/toggleButton";
-import TravelImage from '../images/icon_travel.png';
-import MapImage from '../images/cover-map.png';
-import AmericaImage from '../images/America.jpg';
-import { Country } from './country';
+import ToggleButton from "../../components/toggleButton";
+import TravelImage from '../../images/icon_travel.png';
+import MapImage from '../../images/cover-map.png';
+import AmericaImage from '../../images/America.jpg';
+import { Country } from '../top/country';
 import { useLocation } from "react-router";
 
 const Header = styled.header`
@@ -104,13 +104,8 @@ const CountryImage = styled.image`
   border-radius: 30px;
   background-image: url(${AmericaImage});
 `
-type MyState = {
-  id: number;
-};
 
 export const Sub: React.FC = () => {
-  const { state } = useLocation<MyState>();
-  const { id } = state;
 
   return (
     <>
@@ -120,7 +115,7 @@ export const Sub: React.FC = () => {
           <ToggleButton />
           <MainBackGraund>
             <CountryNameArea>
-                <CountryNameFont>group:{id}</ CountryNameFont>
+                <CountryNameFont>groupa</ CountryNameFont>
             </CountryNameArea>
             <CountryArea>
             </CountryArea> 

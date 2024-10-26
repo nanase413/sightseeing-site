@@ -8,8 +8,9 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom'
-import { Top } from './pages/top'
-import { Sub } from './pages/sub'
+import { Top } from './pages/top/top'
+import { Sub } from './pages/sub/sub'
+import { Malta } from './pages/sub/malta/malta'
 
 const GlobalStyle = createGlobalStyle`
   body * {
@@ -26,6 +27,9 @@ const Main = (
         </Route>
         <Route exact path="/sub">
           <Sub />
+        </Route>
+        <Route exact path="/malta">
+          <Malta />
         </Route>
         <Redirect to="/top" path="*" />
       </Router>

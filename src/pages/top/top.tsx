@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import ToggleButton from "../components/toggleButton"
-import TravelImage from '../images/icon_travel.png';
-import MapImage from '../images/cover-map.png';
-import AmericaImage from '../images/America.jpg';
+import ToggleButton from "../../components/toggleButton"
+import TravelImage from '../../images/icon_travel.png';
+import MapImage from '../../images/cover-map.png';
+import AmericaImage from '../../images/America.jpg';
 import { Country } from './country'
 
 const Header = styled.header`
