@@ -1,9 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import Slider from 'react-slick';
 import ToggleButton from "../../components/toggleButton"
-import TravelImage from '../../images/icon_travel.png';
-import MapImage from '../../images/cover-map.png';
-import AmericaImage from '../../images/America.jpg';
+import SimpleSlider from "../../components/imageSlide"
+import TravelImage from '../../images/icon_travel.png'
+import MapImage from '../../images/cover-map.png'
 import { Country } from './country'
 
 const Header = styled.header`
@@ -15,7 +16,7 @@ const Header = styled.header`
   position: fixed;
   right: 0;
   top: 0;
-  background: rgb(205, 185, 180);
+  background: rgb(205, 185, 150);
 `
 const Wrapper = styled.div`
   bottom: 0;
@@ -48,7 +49,6 @@ const MainBackGraund = styled.div`
 const TravelLogoArea = styled.div`
   flex: 1;
   text-align : left;
-  /*background-color: lightblue; */
 `
 const TravelLogo = styled.image`
   background-size: contain;
@@ -62,18 +62,17 @@ const TravelLogo = styled.image`
 `
 const MapArea = styled.div`
   flex: 6;
+  width: 100%;
+  height: 100%;
   display: flex;
-  /*background-color: lightpink;*/
 `
 const MapAreaLeft = styled.div`
   width: 67%;
   height: 100%;
-  /*background-color: lightyellow;*/
 `
 const MapAreaRight = styled.div`
   width: 33%;
   height: 100%;
-  /*background-color: lightpink;*/
 `
 const Map = styled.image`
   background-size: contain;
@@ -83,16 +82,6 @@ const Map = styled.image`
   width: 90%;
   height: 90%;
   background-image: url(${MapImage});
-`
-const CountryImage = styled.image`
-  background-size: cover;
-  background-repeat:no-repeat;
-  position: absolute;
-  top: 35%;
-  width: 25%;
-  height: 40%;
-  border-radius: 30px;
-  background-image: url(${AmericaImage});
 `
 
 export const Top: React.FC = () => {
@@ -112,7 +101,7 @@ export const Top: React.FC = () => {
                 <Country />
               </MapAreaLeft>
               <MapAreaRight>
-                <CountryImage />
+                <SimpleSlider />
               </MapAreaRight>
             </MapArea> 
           </MainBackGraund>

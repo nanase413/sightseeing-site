@@ -3,7 +3,24 @@ import  { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
+const Buttun = styled.button`
+    float: right;
+    margin-right: 4%;
+    font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #D04D18;
+    box-sizing: border-box;
+    padding: 5px 5px 5px;
+    background-color: rgb(205, 185, 150);
+    border: 2px solid #D04D18;
+    border-radius: 5px;
+`
+
 const Menu = styled.nav`
+    float: right;
+    margin-top: 1.5%;
+    margin-right: 6%;
     box-sizing: border-box;
     padding: 5px 5px 5px;
     background-color: rgb(205, 185, 150);
@@ -14,7 +31,7 @@ const LinkArea = styled.ul`
     z-index: 999;
     background-color: rgb(205, 185, 150);
     width: 200px;
-    height: 300px;
+    height: 200px;
     padding-left: 0px;
     border: 2px solid #D04D18;
     border-radius: 30px;
@@ -25,12 +42,14 @@ const LinkStyle = styled.li`
 `
 const LinkFont = styled(Link)`
     font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #D04D18;
     line-height: 2;
     text-decoration: none;
-    transition: color 3s;
+    color: #D04D18;
+    &:hover {
+    color: white;
+  }
 `
 
 const HamburgerMenu = () => {
@@ -42,21 +61,31 @@ const HamburgerMenu = () => {
 
   return (
     <div>
-      <button onClick={toggleMenu}>
+      <Buttun onClick={toggleMenu}>
         {isOpen ? 'CLOSE' : 'OPEN'}
-      </button>
+      </Buttun>
       
       {isOpen && (
         <Menu>     
           <LinkArea>
             <LinkStyle>
-              <LinkFont to="/sub" className="menu-germany" id="menuGermany">
-                ドイツ
+              <LinkFont to="/germany" className="menu-germany" id="menuGermany">
+                GERMANY
               </LinkFont>
             </LinkStyle>
             <LinkStyle>
               <LinkFont to="/malta" className="menu-malta" >
-                マルタ
+                MALTA
+              </LinkFont>
+            </LinkStyle>
+            <LinkStyle>
+              <LinkFont to="/vietnam" className="menu-Vietnam" >
+                VIETNAM
+              </LinkFont>
+            </LinkStyle>
+            <LinkStyle>
+              <LinkFont to="/america" className="menu-america" >
+                USA
               </LinkFont>
             </LinkStyle>
           </LinkArea>

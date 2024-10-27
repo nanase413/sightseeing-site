@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components';
-import ToggleButton from "../../../../components/toggleButton"
+import ToggleButton from "../../../../components/malta/toggleButtonMaltaFood"
 import FoodImage from '../../../../images/food/Food.png';
 import MaltaFoodImage from '../../../../images/food/MaltaFood.jpg';
 import MaltaFoodImage2 from '../../../../images/food/MaltaFood2.jpg';

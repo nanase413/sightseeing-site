@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components';
-import ToggleButton from "../../../../components/toggleButton"
+import ToggleButton from "../../../../components/america/toggleButtonAboutAmerica"
 import FlagImage from '../../../../images/flag/AmericaFlag.png';
 import SpotImage from '../../../../images/spot/AmericaSpot.jpg';
 import SpotImage2 from '../../../../images/spot/AmericaSpot2.jpg';

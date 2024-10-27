@@ -19,6 +19,10 @@ module.exports = {
             type: 'asset/inline',
             exclude: /node_modules/,
         },
+        {
+            test: /\.css$/,  
+            use: ['style-loader', 'css-loader'],
+        },
       ],
     },
     resolve: {

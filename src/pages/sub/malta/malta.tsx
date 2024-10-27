@@ -1,13 +1,9 @@
 import * as React from 'react';
-import { useRef } from 'react'
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import ToggleButton from "../../../components/toggleButton";
+import ToggleButton from "../../../components/malta/toggleButtonMalta";
 import FlagImage from '../../../images/flag/MaltaFlag.png';
 import FoodImage from '../../../images/food/MaltaFood5.jpg';
 import SpotImage from '../../../images/spot/MaltaSpot.jpg';
-import { Country } from '../../top/country';
-import { useLocation } from "react-router";
 import { Link } from 'react-router-dom'
 
 

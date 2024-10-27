@@ -9,7 +9,6 @@ import {
   Redirect,
 } from 'react-router-dom'
 import { Top } from './pages/top/top'
-import { Sub } from './pages/sub/sub'
 import { Malta } from './pages/sub/malta/malta'
 import { AboutMalta } from './pages/sub/malta/details/aboutMalta'
 import { MaltaFood } from './pages/sub/malta/details/maltaFood'
@@ -39,9 +38,6 @@ const Main = (
     <Router>
         <Route exact path="/top">
           <Top />
-        </Route>
-        <Route exact path="/sub">
-          <Sub />
         </Route>
         <Route exact path="/malta">
           <Malta />

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useRef } from 'react'
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import ToggleButton from "../../../components/toggleButton";
+import ToggleButton from "../../../components/america/toggleButtonAmerica";
 import FlagImage from '../../../images/flag/AmericaFlag.png';
 import FoodImage from '../../../images/food/AmericaFood.jpg';
 import SpotImage from '../../../images/America.jpg';
