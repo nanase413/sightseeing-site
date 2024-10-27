@@ -1,12 +1,11 @@
 import * as React from 'react'
 import styled from 'styled-components';
 import ToggleButton from "../../../../components/toggleButton"
-import FlagImage from '../../../../images/flag/MaltaFlag.png';
-import SpotImage from '../../../../images/spot/MaltaSpot.jpg';
-import SpotImage2 from '../../../../images/spot/MaltaSpot2.jpg';
-import SpotImage3 from '../../../../images/spot/MaltaSpot3.jpg';
-import SpotImage4 from '../../../../images/spot/MaltaSpot4.jpg';
-
+import FoodImage from '../../../../images/food/Food.png';
+import FoodImage2 from '../../../../images/food/AmericaFood2.jpg';
+import FoodImage3 from '../../../../images/food/AmericaFood3.jpg';
+import FoodImage4 from '../../../../images/food/AmericaFood4.jpg';
+import FoodImage5 from '../../../../images/food/AmericaFood5.jpg';
 
 const Header = styled.header`
   font-size: 1.5rem;
@@ -63,7 +62,6 @@ const AreaBackGraund = styled.div`
   width: 96%;
   height: 100%;
   margin: 0% 2%;
-  background: #2C4473;
   border-radius: 30px;
 `
 const AreaImageTop = styled.div`
@@ -92,50 +90,71 @@ const AreaTitleBottomFont = styled.span`
     color: rgb(205, 185, 150);
     line-height: 2;
 `
-const CatchCopyArea = styled.div`
-  width: 100%;
-  height: 20%;
-`
-const CatchCopy = styled.span`
-  font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-  color: rgb(205, 185, 150);
-  line-height: 3;
- 
-`
-const DetailArea1 = styled.div`
-  width: 100%;
-  height: 50%;
-`
-const DetailArea2 = styled.div`
-  width: 100%;
-  height: 30%;
+const TextArea = styled.div`
   display: flex;
-`
-const DetailTitleArea = styled.div`
+  align-items: center;
   width: 100%;
-  height: 30%;
+  height: 24%;
+  margin-left:8%;
 `
-const DetailTitle = styled.span`
-  font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgb(205, 185, 150);
-  line-height: 3;
-`
-const DetailTextArea = styled.div`
+const ImageArea = styled.div`
   width: 100%;
-  height: 70%;
+  height: 76%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 `
-const DetailText = styled.p`
+const FoodText = styled.span`
+  marge-left: 10%;
   font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 0;
   color: rgb(205, 185, 150);
 `
-const Flag = styled.image`
+const FoodImageArea = styled.div`
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+`
+const Food2 = styled.image`
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  background-image: url(${FoodImage2});
+`
+const Food3 = styled.image`
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  background-image: url(${FoodImage3});
+`
+const Food4 = styled.image`
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  background-image: url(${FoodImage4});
+`
+const Food5 = styled.image`
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  background-image: url(${FoodImage5});
+`
+const FoodTitle = styled.span`
+  text-align: center;
+  font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(205, 185, 150);
+`
+const Food = styled.image`
   background-size: cover;
   position: absolute;
   text-align: center;
@@ -144,34 +163,10 @@ const Flag = styled.image`
   height: 40%;
   margin: 0% 7%;
   border-radius: 20px;
-  background-image: url(${FlagImage});
-`
-const Spot = styled.image`
-  background-size: cover;
-  width: 25%;
-  height: 80%;
-  background-image: url(${SpotImage});
-`
-const Spot2 = styled.image`
-  background-size: cover;
-  width: 25%;
-  height: 80%;
-  background-image: url(${SpotImage2});
-`
-const Spot3 = styled.image`
-  background-size: cover;
-  width: 25%;
-  height: 80%;
-  background-image: url(${SpotImage3});
-`
-const Spot4 = styled.image`
-  background-size: cover;
-  width: 25%;
-  height: 80%;
-  background-image: url(${SpotImage4});
+  background-image: url(${FoodImage});
 `
 
-export const AboutMalta: React.FC = () => {
+export const AmericaFood: React.FC = () => {
 
   return (
     <>
@@ -184,33 +179,35 @@ export const AboutMalta: React.FC = () => {
                 <AboutCountryArea>
                   <AreaBackGraund>
                     <AreaImageTop />
-                    <Flag />
+                    <Food />
                     <AreaTitleBottom>
-                      <AreaTitleBottomFont>about MALTA</AreaTitleBottomFont>
+                      <AreaTitleBottomFont>about FOOD</AreaTitleBottomFont>
                     </AreaTitleBottom>
                   </AreaBackGraund>
                 </AboutCountryArea>
                 <InformationArea>
-                  <CatchCopyArea>         
-                    <CatchCopy>地中海に浮かぶ美しい島国</CatchCopy>
-                  </CatchCopyArea>
-                  <DetailArea1>
-                    <DetailTitleArea>
-                      <DetailTitle>基本情報</DetailTitle>
-                    </DetailTitleArea>
-                    <DetailTextArea>
-                      <DetailText>・正式名称：マルタ共和国（Republic of Malta）</DetailText>
-                      <DetailText>・首都：ヴァレッタ（Valletta）</DetailText>
-                      <DetailText>・人口：51万人</DetailText>
-                      <DetailText>・公用語：マルタ語、英語</DetailText>
-                    </DetailTextArea>
-                  </DetailArea1>
-                  <DetailArea2>
-                    <Spot/>
-                    <Spot2/>
-                    <Spot3/>
-                    <Spot4/>
-                  </DetailArea2>
+                  <TextArea>
+                    <FoodText>移民の国としてさまざまな国の伝統料理をミックスし独自の食文化を形成。<br />
+                    ハンバーガーやピザなどボリュームたっぷりのメニューも豊富。</FoodText>
+                  </TextArea>
+                  <ImageArea>
+                    <FoodImageArea>
+                      <Food2 />
+                      <FoodTitle>豪快な見た目が印象的な『ローストチキン』</FoodTitle>
+                    </FoodImageArea>
+                    <FoodImageArea>
+                      <Food3 />
+                      <FoodTitle>野球観戦でも人気のファスト『フードホットドッグ』</FoodTitle>
+                    </FoodImageArea>
+                    <FoodImageArea>
+                      <Food4 />
+                      <FoodTitle>テキサス州発祥の郷土料理『チリコンカン』</FoodTitle>
+                    </FoodImageArea>
+                    <FoodImageArea>
+                      <Food5 />
+                      <FoodTitle>アメリカ定番の家庭料理『マッケンチーズ』</FoodTitle>
+                    </FoodImageArea>                  
+                  </ImageArea>
                 </InformationArea>
             </CountryArea> 
           </MainBackGraund>

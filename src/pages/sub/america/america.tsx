@@ -3,9 +3,9 @@ import { useRef } from 'react'
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ToggleButton from "../../../components/toggleButton";
-import FlagImage from '../../../images/flag/MaltaFlag.png';
-import FoodImage from '../../../images/food/MaltaFood5.jpg';
-import SpotImage from '../../../images/spot/MaltaSpot.jpg';
+import FlagImage from '../../../images/flag/AmericaFlag.png';
+import FoodImage from '../../../images/food/AmericaFood.jpg';
+import SpotImage from '../../../images/America.jpg';
 import { Country } from '../../top/country';
 import { useLocation } from "react-router";
 import { Link } from 'react-router-dom'
@@ -142,7 +142,7 @@ const Spot = styled.image`
   background-image: url(${SpotImage});
 `
 
-export const Malta: React.FC = () => {
+export const America: React.FC = () => {
 
   return (
     <>
@@ -153,18 +153,18 @@ export const Malta: React.FC = () => {
           <MainBackGraund>
             <CountryArea>
                 <AboutCountryArea>
-                    <LinkFont to= "/malta/details/aboutMalta">
+                    <LinkFont to= "/america/details/aboutAmerica">
                         <AreaBackGraund>
                             <AreaImageTop />
                                 <Flag />
                             <AreaTitleBottom>
-                                <AreaTitleBottomFont>about MALTA</AreaTitleBottomFont>
+                                <AreaTitleBottomFont>about USA</AreaTitleBottomFont>
                             </AreaTitleBottom>
                         </AreaBackGraund>
                     </LinkFont>
                 </AboutCountryArea>
                 <FoodArea>
-                    <LinkFont to= "/malta/details/maltaFood">
+                    <LinkFont to= "/america/details/americaFood">
                         <AreaBackGraund>
                             <AreaTitleTop>
                                 <AreaTitleTopFont>about FOOD</AreaTitleTopFont>
@@ -175,7 +175,7 @@ export const Malta: React.FC = () => {
                     </LinkFont>
                 </FoodArea>
                 <SpotArea>
-                    <LinkFont to= "/malta/details/maltaSpot">
+                    <LinkFont to= "/america/details/americaSpot">
                         <AreaBackGraund>
                             <AreaImageTop />
                                 <Spot />

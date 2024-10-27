@@ -1,11 +1,11 @@
 import * as React from 'react'
 import styled from 'styled-components';
 import ToggleButton from "../../../../components/toggleButton"
-import FlagImage from '../../../../images/flag/MaltaFlag.png';
-import SpotImage from '../../../../images/spot/MaltaSpot.jpg';
-import SpotImage2 from '../../../../images/spot/MaltaSpot2.jpg';
-import SpotImage3 from '../../../../images/spot/MaltaSpot3.jpg';
-import SpotImage4 from '../../../../images/spot/MaltaSpot4.jpg';
+import FlagImage from '../../../../images/flag/VietnamFlag.jpg';
+import SpotImage from '../../../../images/spot/VietnamSpot.jpg';
+import SpotImage2 from '../../../../images/spot/VietnamSpot2.jpg';
+import SpotImage3 from '../../../../images/spot/VietnamSpot3.jpg';
+import SpotImage4 from '../../../../images/spot/VietnamSpot4.jpg';
 
 
 const Header = styled.header`
@@ -137,6 +137,7 @@ const DetailText = styled.p`
 `
 const Flag = styled.image`
   background-size: cover;
+  background-position: -30px -0px; 
   position: absolute;
   text-align: center;
   top: 15%;
@@ -171,7 +172,7 @@ const Spot4 = styled.image`
   background-image: url(${SpotImage4});
 `
 
-export const AboutMalta: React.FC = () => {
+export const AboutVietnam: React.FC = () => {
 
   return (
     <>
@@ -186,23 +187,23 @@ export const AboutMalta: React.FC = () => {
                     <AreaImageTop />
                     <Flag />
                     <AreaTitleBottom>
-                      <AreaTitleBottomFont>about MALTA</AreaTitleBottomFont>
+                      <AreaTitleBottomFont>about VIETNAM</AreaTitleBottomFont>
                     </AreaTitleBottom>
                   </AreaBackGraund>
                 </AboutCountryArea>
                 <InformationArea>
                   <CatchCopyArea>         
-                    <CatchCopy>地中海に浮かぶ美しい島国</CatchCopy>
+                    <CatchCopy>アジアで最も活気にあふれる国</CatchCopy>
                   </CatchCopyArea>
                   <DetailArea1>
                     <DetailTitleArea>
                       <DetailTitle>基本情報</DetailTitle>
                     </DetailTitleArea>
                     <DetailTextArea>
-                      <DetailText>・正式名称：マルタ共和国（Republic of Malta）</DetailText>
-                      <DetailText>・首都：ヴァレッタ（Valletta）</DetailText>
-                      <DetailText>・人口：51万人</DetailText>
-                      <DetailText>・公用語：マルタ語、英語</DetailText>
+                      <DetailText>・正式名称：ベトナム社会主義共和国（Socialist Republic of Viet Nam）</DetailText>
+                      <DetailText>・首都：ハノイ</DetailText>
+                      <DetailText>・人口：1億30万人</DetailText>
+                      <DetailText>・公用語：ベトナム語</DetailText>
                     </DetailTextArea>
                   </DetailArea1>
                   <DetailArea2>

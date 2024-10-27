@@ -3,9 +3,9 @@ import { useRef } from 'react'
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ToggleButton from "../../../components/toggleButton";
-import FlagImage from '../../../images/flag/MaltaFlag.png';
-import FoodImage from '../../../images/food/MaltaFood5.jpg';
-import SpotImage from '../../../images/spot/MaltaSpot.jpg';
+import FlagImage from '../../../images/flag/VietnamFlag.jpg';
+import FoodImage from '../../../images/food/VietnamFood.jpg';
+import SpotImage from '../../../images/spot/VietnamSpot.jpg';
 import { Country } from '../../top/country';
 import { useLocation } from "react-router";
 import { Link } from 'react-router-dom'
@@ -103,13 +103,14 @@ const AreaTitleBottomFont = styled.span`
     display: flex;
     justify-content: center;
     font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: bold;
     color: rgb(205, 185, 150);
     line-height: 2;
 `
 const Flag = styled.image`
   background-size: cover;
+  background-position: -30px -0px; 
   position: absolute;
   text-align: center;
   top: 15%;
@@ -142,7 +143,7 @@ const Spot = styled.image`
   background-image: url(${SpotImage});
 `
 
-export const Malta: React.FC = () => {
+export const Vietnam: React.FC = () => {
 
   return (
     <>
@@ -153,18 +154,18 @@ export const Malta: React.FC = () => {
           <MainBackGraund>
             <CountryArea>
                 <AboutCountryArea>
-                    <LinkFont to= "/malta/details/aboutMalta">
+                    <LinkFont to= "/vietnam/details/aboutVietnam">
                         <AreaBackGraund>
                             <AreaImageTop />
                                 <Flag />
                             <AreaTitleBottom>
-                                <AreaTitleBottomFont>about MALTA</AreaTitleBottomFont>
+                                <AreaTitleBottomFont>about VIETNAM</AreaTitleBottomFont>
                             </AreaTitleBottom>
                         </AreaBackGraund>
                     </LinkFont>
                 </AboutCountryArea>
                 <FoodArea>
-                    <LinkFont to= "/malta/details/maltaFood">
+                    <LinkFont to= "/vietnam/details/vietnamFood">
                         <AreaBackGraund>
                             <AreaTitleTop>
                                 <AreaTitleTopFont>about FOOD</AreaTitleTopFont>
@@ -175,7 +176,7 @@ export const Malta: React.FC = () => {
                     </LinkFont>
                 </FoodArea>
                 <SpotArea>
-                    <LinkFont to= "/malta/details/maltaSpot">
+                    <LinkFont to= "/vietnam/details/vietnamSpot">
                         <AreaBackGraund>
                             <AreaImageTop />
                                 <Spot />

@@ -24,18 +24,6 @@ const Vietnam = styled.h2`
   left: 22.5%;
   color: white;
 `
-const Australia = styled.h2`
-  position: absolute;
-  top: 77%;
-  left: 26%;
-  color: white;
-`
-const Hawaii = styled.h2`
-  position: absolute;
-  top: 59%;
-  left: 33%;
-  color: white;
-`
 const America = styled.h2`
   position: absolute;
   top: 55%;
@@ -45,22 +33,16 @@ const America = styled.h2`
 export const Country: React.FC = () => {
   return (
     <>
-        <Link to= "/sub">
+        <Link to= "/germany">
           <Germany><FaMapMarkerAlt/></Germany>
         </Link>
         <Link to= "/malta">
           <Malta><FaMapMarkerAlt/></Malta>
         </Link>
-        <Link to= "/sub">
+        <Link to= "/vietnam">
           <Vietnam><FaMapMarkerAlt/></Vietnam>
         </Link>
-        <Link to= "/sub">
-          <Australia><FaMapMarkerAlt/></Australia>
-        </Link>
-        <Link to= "/sub">
-          <Hawaii><FaMapMarkerAlt/></Hawaii>
-        </Link>
-        <Link to= "/sub">
+        <Link to= "/america">
           <America><FaMapMarkerAlt/></America>
         </Link>
     </>

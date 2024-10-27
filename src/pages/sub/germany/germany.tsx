@@ -3,9 +3,9 @@ import { useRef } from 'react'
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ToggleButton from "../../../components/toggleButton";
-import FlagImage from '../../../images/flag/MaltaFlag.png';
-import FoodImage from '../../../images/food/MaltaFood5.jpg';
-import SpotImage from '../../../images/spot/MaltaSpot.jpg';
+import FlagImage from '../../../images/flag/GermanyFlag.png';
+import FoodImage from '../../../images/food/GermanyFood.jpg';
+import SpotImage from '../../../images/spot/GermanySpot.jpg';
 import { Country } from '../../top/country';
 import { useLocation } from "react-router";
 import { Link } from 'react-router-dom'
@@ -99,7 +99,16 @@ const AreaTitleTopFont = styled.span`
     color: rgb(205, 185, 150);
     line-height: 4;
 `
-const AreaTitleBottomFont = styled.span`
+const AreaTitleBottomFont1 = styled.span`
+    display: flex;
+    justify-content: center;
+    font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(205, 185, 150);
+    line-height: 2;
+`
+const AreaTitleBottomFont2 = styled.span`
     display: flex;
     justify-content: center;
     font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
@@ -142,7 +151,7 @@ const Spot = styled.image`
   background-image: url(${SpotImage});
 `
 
-export const Malta: React.FC = () => {
+export const Germany: React.FC = () => {
 
   return (
     <>
@@ -153,18 +162,18 @@ export const Malta: React.FC = () => {
           <MainBackGraund>
             <CountryArea>
                 <AboutCountryArea>
-                    <LinkFont to= "/malta/details/aboutMalta">
+                    <LinkFont to= "/germany/details/aboutGermany">
                         <AreaBackGraund>
                             <AreaImageTop />
                                 <Flag />
                             <AreaTitleBottom>
-                                <AreaTitleBottomFont>about MALTA</AreaTitleBottomFont>
+                                <AreaTitleBottomFont1>about GERMANY</AreaTitleBottomFont1>
                             </AreaTitleBottom>
                         </AreaBackGraund>
                     </LinkFont>
                 </AboutCountryArea>
                 <FoodArea>
-                    <LinkFont to= "/malta/details/maltaFood">
+                    <LinkFont to= "/germany/details/germanyFood">
                         <AreaBackGraund>
                             <AreaTitleTop>
                                 <AreaTitleTopFont>about FOOD</AreaTitleTopFont>
@@ -175,12 +184,12 @@ export const Malta: React.FC = () => {
                     </LinkFont>
                 </FoodArea>
                 <SpotArea>
-                    <LinkFont to= "/malta/details/maltaSpot">
+                    <LinkFont to= "/germany/details/germanySpot">
                         <AreaBackGraund>
                             <AreaImageTop />
                                 <Spot />
                             <AreaTitleBottom>
-                                <AreaTitleBottomFont>about SPOT</AreaTitleBottomFont>
+                                <AreaTitleBottomFont2>about SPOT</AreaTitleBottomFont2>
                             </AreaTitleBottom>
                         </AreaBackGraund>
                     </LinkFont>

@@ -7,7 +7,6 @@ import MaltaFoodImage2 from '../../../../images/food/MaltaFood2.jpg';
 import MaltaFoodImage3 from '../../../../images/food/MaltaFood3.jpg';
 import MaltaFoodImage4 from '../../../../images/food/MaltaFood4.jpg';
 
-
 const Header = styled.header`
   font-size: 1.5rem;
   height: 20rem;
@@ -96,6 +95,7 @@ const TextArea = styled.div`
   align-items: center;
   width: 100%;
   height: 24%;
+  margin-left:8%;
 `
 const ImageArea = styled.div`
   width: 100%;
@@ -110,7 +110,6 @@ const FoodText = styled.span`
   font-size: 1.5rem;
   font-weight: bold;
   color: rgb(205, 185, 150);
-
 `
 const FoodImageArea = styled.div`
   display: grid;
@@ -194,19 +193,19 @@ export const MaltaFood: React.FC = () => {
                   <ImageArea>
                     <FoodImageArea>
                       <MaltaFood1 />
-                      <FoodTitle>マルタ伝統のウサギ料理</FoodTitle>
+                      <FoodTitle>マルタ伝統の『ウサギ料理』</FoodTitle>
                     </FoodImageArea>
                     <FoodImageArea>
                       <MaltaFood2 />
-                      <FoodTitle>マルタを代表するスナックパスティッツィ</FoodTitle>
+                      <FoodTitle>マルタを代表するスナック『パスティッツィ』</FoodTitle>
                     </FoodImageArea>
                     <FoodImageArea>
                       <MaltaFood3 />
-                      <FoodTitle>マルタのクラフトビールCISK</FoodTitle>
+                      <FoodTitle>マルタのクラフトビール『CISK』</FoodTitle>
                     </FoodImageArea>
                     <FoodImageArea>
                       <MaltaFood4 />
-                      <FoodTitle>四角形のパスタに具材を詰めたラビオリ</FoodTitle>
+                      <FoodTitle>四角形のパスタに具材を詰めた『ラビオリ』</FoodTitle>
                     </FoodImageArea>                  
                   </ImageArea>
                 </InformationArea>

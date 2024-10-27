@@ -1,11 +1,11 @@
 import * as React from 'react'
 import styled from 'styled-components';
 import ToggleButton from "../../../../components/toggleButton"
-import FlagImage from '../../../../images/flag/MaltaFlag.png';
-import SpotImage from '../../../../images/spot/MaltaSpot.jpg';
-import SpotImage2 from '../../../../images/spot/MaltaSpot2.jpg';
-import SpotImage3 from '../../../../images/spot/MaltaSpot3.jpg';
-import SpotImage4 from '../../../../images/spot/MaltaSpot4.jpg';
+import SpotImage from '../../../../images/spot/VietnamSpot3.jpg';
+import SpotImage4 from '../../../../images/spot/VietnamSpot6.jpg';
+import SpotImage5 from '../../../../images/spot/VietnamSpot5.jpg';
+import SpotImage6 from '../../../../images/spot/VietnamSpot4.jpg';
+import SpotImage7 from '../../../../images/spot/VietnamSpot2.jpg';
 
 
 const Header = styled.header`
@@ -63,7 +63,6 @@ const AreaBackGraund = styled.div`
   width: 96%;
   height: 100%;
   margin: 0% 2%;
-  background: #2C4473;
   border-radius: 30px;
 `
 const AreaImageTop = styled.div`
@@ -92,50 +91,70 @@ const AreaTitleBottomFont = styled.span`
     color: rgb(205, 185, 150);
     line-height: 2;
 `
-const CatchCopyArea = styled.div`
-  width: 100%;
-  height: 20%;
-`
-const CatchCopy = styled.span`
-  font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-  color: rgb(205, 185, 150);
-  line-height: 3;
- 
-`
-const DetailArea1 = styled.div`
-  width: 100%;
-  height: 50%;
-`
-const DetailArea2 = styled.div`
-  width: 100%;
-  height: 30%;
+const TextArea = styled.div`
   display: flex;
-`
-const DetailTitleArea = styled.div`
+  align-items: center;
   width: 100%;
-  height: 30%;
+  height: 24%;
+  margin-left:8%;
 `
-const DetailTitle = styled.span`
-  font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgb(205, 185, 150);
-  line-height: 3;
-`
-const DetailTextArea = styled.div`
+const ImageArea = styled.div`
   width: 100%;
-  height: 70%;
+  height: 76%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 `
-const DetailText = styled.p`
+const FoodText = styled.span`
   font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 0;
   color: rgb(205, 185, 150);
 `
-const Flag = styled.image`
+const SpotImageArea = styled.div`
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+`
+const Spot4 = styled.image`
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  background-image: url(${SpotImage4});
+`
+const Spot5 = styled.image`
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  background-image: url(${SpotImage5});
+`
+const Spot6 = styled.image`
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  background-image: url(${SpotImage6});
+`
+const Spot7 = styled.image`
+  background-size: cover;
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  border-radius: 20px;
+  background-image: url(${SpotImage7});
+`
+const SpotTitle = styled.span`
+  text-align: center;
+  font-family: "program", "Helvetica Neue", Helvetica, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(205, 185, 150);
+`
+const Spot = styled.image`
   background-size: cover;
   position: absolute;
   text-align: center;
@@ -144,34 +163,10 @@ const Flag = styled.image`
   height: 40%;
   margin: 0% 7%;
   border-radius: 20px;
-  background-image: url(${FlagImage});
-`
-const Spot = styled.image`
-  background-size: cover;
-  width: 25%;
-  height: 80%;
   background-image: url(${SpotImage});
 `
-const Spot2 = styled.image`
-  background-size: cover;
-  width: 25%;
-  height: 80%;
-  background-image: url(${SpotImage2});
-`
-const Spot3 = styled.image`
-  background-size: cover;
-  width: 25%;
-  height: 80%;
-  background-image: url(${SpotImage3});
-`
-const Spot4 = styled.image`
-  background-size: cover;
-  width: 25%;
-  height: 80%;
-  background-image: url(${SpotImage4});
-`
 
-export const AboutMalta: React.FC = () => {
+export const VietnamSpot: React.FC = () => {
 
   return (
     <>
@@ -184,33 +179,36 @@ export const AboutMalta: React.FC = () => {
                 <AboutCountryArea>
                   <AreaBackGraund>
                     <AreaImageTop />
-                    <Flag />
+                      <Spot />
                     <AreaTitleBottom>
-                      <AreaTitleBottomFont>about MALTA</AreaTitleBottomFont>
+                      <AreaTitleBottomFont>about SPOT</AreaTitleBottomFont>
                     </AreaTitleBottom>
                   </AreaBackGraund>
                 </AboutCountryArea>
                 <InformationArea>
-                  <CatchCopyArea>         
-                    <CatchCopy>地中海に浮かぶ美しい島国</CatchCopy>
-                  </CatchCopyArea>
-                  <DetailArea1>
-                    <DetailTitleArea>
-                      <DetailTitle>基本情報</DetailTitle>
-                    </DetailTitleArea>
-                    <DetailTextArea>
-                      <DetailText>・正式名称：マルタ共和国（Republic of Malta）</DetailText>
-                      <DetailText>・首都：ヴァレッタ（Valletta）</DetailText>
-                      <DetailText>・人口：51万人</DetailText>
-                      <DetailText>・公用語：マルタ語、英語</DetailText>
-                    </DetailTextArea>
-                  </DetailArea1>
-                  <DetailArea2>
-                    <Spot/>
-                    <Spot2/>
-                    <Spot3/>
-                    <Spot4/>
-                  </DetailArea2>
+                  <TextArea>
+                    <FoodText>地中海に浮かぶ小さな島国マルタは世界遺産の観光と<br />
+                    リゾート気分を両方楽しめるとても魅力的な国です。</FoodText>
+                  </TextArea>
+                  <ImageArea>
+                    <SpotImageArea>
+                      <Spot4 />
+                      <SpotTitle>西洋文化と多様な民族の生活と文化が織りなす<br />
+                      オリエンタルな雰囲気が魅力的な街『ホーチミン』</SpotTitle>
+                    </SpotImageArea>
+                    <SpotImageArea>
+                      <Spot5 />
+                      <SpotTitle>お洒落なカフェや土産物店が点在するリゾート『ダナン』</SpotTitle>
+                    </SpotImageArea>
+                    <SpotImageArea>
+                      <Spot6 />      
+                      <SpotTitle>色とりどりのランタンが街中に輝く『ホイアン』</SpotTitle>
+                    </SpotImageArea>
+                    <SpotImageArea>
+                      <Spot7 />  
+                      <SpotTitle>1000年以上にわたり首都として栄えてきた首都『ハノイ』</SpotTitle>
+                    </SpotImageArea>                  
+                  </ImageArea>
                 </InformationArea>
             </CountryArea> 
           </MainBackGraund>

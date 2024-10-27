@@ -1,11 +1,11 @@
 import * as React from 'react'
 import styled from 'styled-components';
 import ToggleButton from "../../../../components/toggleButton"
-import FlagImage from '../../../../images/flag/MaltaFlag.png';
-import SpotImage from '../../../../images/spot/MaltaSpot.jpg';
-import SpotImage2 from '../../../../images/spot/MaltaSpot2.jpg';
-import SpotImage3 from '../../../../images/spot/MaltaSpot3.jpg';
-import SpotImage4 from '../../../../images/spot/MaltaSpot4.jpg';
+import FlagImage from '../../../../images/flag/AmericaFlag.png';
+import SpotImage from '../../../../images/spot/AmericaSpot.jpg';
+import SpotImage2 from '../../../../images/spot/AmericaSpot2.jpg';
+import SpotImage3 from '../../../../images/spot/AmericaSpot3.jpg';
+import SpotImage4 from '../../../../images/spot/AmericaSpot4.jpg';
 
 
 const Header = styled.header`
@@ -171,7 +171,7 @@ const Spot4 = styled.image`
   background-image: url(${SpotImage4});
 `
 
-export const AboutMalta: React.FC = () => {
+export const AboutAmerica: React.FC = () => {
 
   return (
     <>
@@ -186,23 +186,23 @@ export const AboutMalta: React.FC = () => {
                     <AreaImageTop />
                     <Flag />
                     <AreaTitleBottom>
-                      <AreaTitleBottomFont>about MALTA</AreaTitleBottomFont>
+                      <AreaTitleBottomFont>about USA</AreaTitleBottomFont>
                     </AreaTitleBottom>
                   </AreaBackGraund>
                 </AboutCountryArea>
                 <InformationArea>
                   <CatchCopyArea>         
-                    <CatchCopy>地中海に浮かぶ美しい島国</CatchCopy>
+                    <CatchCopy>エリアによって多様な雰囲気を味わえる国</CatchCopy>
                   </CatchCopyArea>
                   <DetailArea1>
                     <DetailTitleArea>
                       <DetailTitle>基本情報</DetailTitle>
                     </DetailTitleArea>
                     <DetailTextArea>
-                      <DetailText>・正式名称：マルタ共和国（Republic of Malta）</DetailText>
-                      <DetailText>・首都：ヴァレッタ（Valletta）</DetailText>
-                      <DetailText>・人口：51万人</DetailText>
-                      <DetailText>・公用語：マルタ語、英語</DetailText>
+                      <DetailText>・正式名称：アメリカ合衆国（United States of America）</DetailText>
+                      <DetailText>・首都：ワシントンD.C.</DetailText>
+                      <DetailText>・人口：3億2,775万人</DetailText>
+                      <DetailText>・公用語：英語</DetailText>
                     </DetailTextArea>
                   </DetailArea1>
                   <DetailArea2>
